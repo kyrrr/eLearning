@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="icon" href="mininote.png" type="image/gif">
+<link rel="stylesheet" href="notestyle.css" type="text/css">
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="app2.js"></script>
+<script src="toner.js"></script>
+<script src="skalaer.js"></script>
+<script src="teller.js"></script>
+<title>Noteverdi-quiz</title>
+</head>
+
+<body>
+<div id="container">
+<nav>
+<img src="mininote.png" />
+  <a href="index.html">HJEM</a> |
+  <a href="/rytmetakt1.html">Rytmer og takter</a> |
+  <a href="noter1.html">Noter</a> |
+  <a href="/kek/">Gehør</a> |
+  <a href="oppsummeringQuiz.html">Stor quiz</a>
+  <img src="mininote.png" />
+</nav>
+
+
+    
+<div id="content">
+        <script src="dragdrop2.js"></script>
+        
+        <h3>En av disse taktene mangler noe for å fylles helt ut. Hvilken av disse taktene er ikke fylt ut rett?</h3>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<table class="fixed" id='table-draggable1'>  
+                <tbody class="connectedSortable">
+                    <tr>
+                    <td class="DragndropContainer" id="q1"></td>
+                   
+                </tr>
+            </table>
+        </div>
+        
+		<br>
+        
+		<div id="answerDiv" ondrop="drop(event)" ondragover="allowDrop(event)" class="DragndropOriginalContainer">
+			<img class="DragndropItem" id="a1" src="./quizbilder/dragquizbilde1.png" draggable="true" ondragstart="drag(event)" width="50%" height="100">
+			<br/><br/>
+			<img class="DragndropItem" id="a2" src="./quizbilder/dragquizbilde2.png" draggable="true" ondragstart="drag(event)" width="50%" height="100">
+			
+        </div>
+		<p>
+        <div id="knapper">
+		<p>
+		<input type="button" value="Continue" id="checkQuizScore" name="checkQuizScore" onclick="result=checkQuizScore(); leggTil(result);">
+        <input type="reset" value="Reset" id="reset" name="reset" onclick="resetDragndrop()">
+		</p>
+        </div>
+		</p>
+		<br />
+		<div id="resultDiv">
+		</div>
+		<div id="feedback">
+		</div>
+		
+		<p>Du kan prøve så mange ganger du bare vil. Trykk deg videre om du vil ta neste quiz.
+		</p><p>
+		<a href="rytmetaktQuiz.html"><img src="pilFrem.png"/></a>
+		</p>
+		
+</div> <!--/content -->
+<footer>
+<p>Laget av gruppe 2</p>
+</footer>
+</div> <!--/container-->
+</body>
+</html>

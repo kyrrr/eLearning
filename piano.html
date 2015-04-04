@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="icon" href="mininote.png" type="image/gif">
+<link rel="stylesheet" href="notestyle.css" type="text/css">
+<script type="text/javascript">
+	function minLoad(){
+	
+		
+		var c_pressed = new Image();
+		c_pressed.src = "c-pressed.png";
+		
+		var c_pressed = new Image();
+		c_pressed.src = "ciss-pressed.png";
+		
+		var d_pressed = new Image();
+		d_pressed.src = "d-pressed.png";
+		
+		
+		var eb_pressed = new Image();
+		eb_pressed.src = "eb-pressed.png";
+		
+		var e_pressed = new Image();
+		e_pressed.src = "e-pressed.png";
+		
+		var f_pressed = new Image();
+		f_pressed.src = "f-pressed.png";
+		
+		var fiss_pressed = new Image();
+		fiss_pressed.src = "fiss-pressed.png";
+		
+		var g_pressed = new Image();
+		g_pressed.src = "g-pressed.png";
+		
+		var ab_pressed = new Image();
+		ab_pressed.src = "ab-pressed.png";
+		
+		var a_pressed = new Image();
+		a_pressed.src = "a-pressed.png";
+		
+		var hb_pressed = new Image();
+		hb_pressed.src = "hb-pressed.png";
+		
+		var h_pressed = new Image();
+		h_pressed.src = "h-pressed.png";
+		
+		var c2_pressed = new Image();
+		c2_pressed.src = "c2-pressed.png";
+		
+		
+		
+	
+	}
+
+
+
+</script>
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<title>Piano</title>
+</head>
+
+<body onLoad="minLoad()">
+<div id="container">
+<nav>
+<img src="mininote.png" />
+  <a href="index.html">HJEM</a> |
+  <a href="/884618/elaering/rytmetakt1.html">Rytmer og takter</a> |
+  <a href="/884618/elaering/noter1.html">Noter</a> |
+  <a href="/kek/">Gehør</a> |
+  <a href="/884618/elaering/oppsummeringQuiz.html">Stor quiz</a>
+  <img src="mininote.png" />
+</nav>
+<div id="content">
+ 
+<script src="toner.js"></script>
+<script src="pg.js"></script>   
+
+<p>
+Her kan du bruke tastaturet ditt som et piano!<br/><br/>
+
+Bokstavene A-K på den midterste tastaturraden er alle de hvite tangentene i en oktav. W, E, T, Y og U på den øverste raden er de svarte tangentene.<br/><br/>
+
+Det kan ta litt tid å bli vant til et "piano" som dette, men bare trykk i vei og lag litt musikk!<br/><br/>
+
+Spill tonene du har lest om hittil og tenk på hvordan de henger sammen.<br/><br/>
+<br/><br/>
+Etter du har trykket deg ferdig her er det på tide med noen quizzer som tester det du har lest om i dette temaet. Lykke til!<br />
+<img src="kromatikk.png" height="170px" width="630px" /><br />
+
+
+</p>
+
+<div id="filler" style="margin: 100px;">
+
+<div id="piano" style="position: relative;">
+
+<img src="alle-un-pressed.png" id="alle-un-pressed" style="position: absolute" />
+
+<img id="pC" style="position: absolute"  />
+
+<img id="pCiss" style="position: absolute" />
+
+<img id="pD" style="position: absolute"  />
+
+<img id="pEb" style="position: absolute" />
+
+<img id="pE"  style="position: absolute" />
+
+<img id="pF" style="position: absolute" />
+
+<img id="pFiss" style="position: absolute"  />
+
+<img id="pG" style="position: absolute" />
+
+<img id="pAb" style="position: absolute" />
+
+<img id="pA" style="position: absolute" />
+
+<img id="pHb" style="position: absolute" />
+
+<img id="pH"  style="position: absolute"/>
+
+<img id="pC2" style="position: absolute" />
+
+</div>
+</div>
+
+<div id="instrumentSimulator" style="display: none;"> 
+
+<input type="button" id="pgC" value="C" onClick="pgC()">
+
+<input type="button" id="pgCiss" value="Ciss" onClick="pgCiss()">
+
+<input type="button" id="pgD" value="D" onClick="pgD()">
+
+<input type="button" id="pgEb" value="Eb" onClick="pgEb()">
+
+<input type="button" id="pgE" value="E" onClick="pgE()">
+
+<input type="button" id="pgF" value="F" onClick="pgF()">
+
+<input type="button" id="pgFiss" value="Fiss" onClick="pgFiss()">
+
+<input type="button" id="pgG" value="G" onClick="pgG()">
+
+<input type="button" id="pgAb" value="Ab" onClick="pgAb()">
+
+<input type="button" id="pgA" value="A" onClick="pgA()">
+
+<input type="button" id="pgHb" value="Hb" onClick="pgHb()">
+
+<input type="button" id="pgH" value="H" onClick="pgH()">
+
+<input type="button" id="pgC2" value="C2" onClick="pgC2()">
+</div>
+
+
+
+  
+<script src="keyboard3.js"></script>
+
+
+
+<div id="pilFrem" style="position: relative;"><a href="notequizDragdrop.html"><img src="pilFrem.png" id="pilFrem" style="position: absolute; left:80%; top:170px;"></a></div>
+  
+</div> <!--/content -->
+<footer>
+<p>Laget av gruppe 2</p>
+</footer>
+</div> <!--/container-->
+</body>
+</html>

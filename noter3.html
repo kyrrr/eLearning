@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="icon" href="mininote.png" type="image/gif">
+<link rel="stylesheet" href="notestyle.css" type="text/css">
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="app2.js"></script>
+<script src="toner.js"></script>
+<script src="skalaer.js"></script>
+<title>Noter</title>
+</head>
+
+<body>
+<div id="container">
+<nav>
+<img src="mininote.png" />
+  <a href="index.html">HJEM</a> |
+  <a href="/884618/elaering/rytmetakt1.html">Rytmer og takter</a> |
+  <a href="/884618/elaering/noter1.html">Noter</a> |
+  <a href="/884618/elaering/gehor.html">Gehør</a> |
+  <a href="/884618/elaering/oppsummeringQuiz.html">Stor quiz</a>
+  <img src="mininote.png" />
+</nav>
+
+
+    
+<div id="content">
+
+
+<p>
+Man kaller mellomrommet mellom en tone til den neste med samme navn en <em>oktav</em>. En oktav er et <em>intervall</em>, som betyr mellomrom. I tilfellet musikk betyr det mellomrommet mellom to toner. Intervaller kommer vi tilbake til senere, i temaet <em>Gehør</em>.<br /> <br />
+
+Her kan du se og høre tonen C i tre oktaver. Alle toner har flere oktaver, både lavere og høyere.<br /> <br />
+
+<canvas id="myCanvasCgangerTre" width="430" height="116">
+</canvas>
+
+<script>
+ function start()
+  {
+      window.requestAnimFrame = (function(callback) {
+        return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+        function(callback) {
+          window.setTimeout(callback, 1000 / 60);
+        };
+      })();
+
+	  
+ 
+
+		
+      	function drawRectangle(myRectangle, context) {
+        context.beginPath();
+        context.rect(myRectangle.x, myRectangle.y, myRectangle.width, myRectangle.height);
+        context.fillStyle = '#8ED6FF';
+        context.fill();
+        context.lineWidth = myRectangle.borderWidth;
+        context.strokeStyle = 'black';
+        context.stroke();
+      
+      }
+      
+      
+      function animate(myRectangle, canvas, context, startTime) {
+        // update
+        var time = (new Date()).getTime() - startTime;
+
+        var linearSpeed = 93.5;
+        // pixels / second
+        var newX = linearSpeed * time / 1000;
+
+        if(newX < canvas.width - myRectangle.width - myRectangle.borderWidth / 2) {
+          myRectangle.x = newX;
+        }
+
+        // clear
+        context.clearRect(0, 0, canvas.width, canvas.height);
+
+        drawRectangle(myRectangle, context);
+
+        // request new frame
+        requestAnimFrame(function() {
+          animate(myRectangle, canvas, context, startTime);
+        });
+      }
+      var canvas = document.getElementById('myCanvasCgangerTre');
+      var context = canvas.getContext('2d');
+
+      var myRectangle = {
+        x: 30,
+        y: 28, //høyere tall flytter ned.
+        width: 0,
+        height: 40, //strekens høyde
+        borderWidth: 5
+      };
+      
+
+      //wait one second before starting animation
+      setTimeout(function() {
+        var startTime = (new Date()).getTime();
+        animate(myRectangle, canvas, context, startTime);
+      }, 0);
+      
+}
+
+ </script>
+<br/>
+<input type="button" id="start" value="start" onClick="start();cgangertre()"><br/>
+<br/><br/>
+Om du hører godt etter kan du høre at de låter veldig likt. Forskjellen er kun at noen er lysere/høyere enn andre. <br /> <br />
+Det finnes strengt tatt ingen magisk måte å lære disse tonene på. Man er nesten nødt til å pugge litt. Om du føler deg trygg på tonene vi har vist hittil kan du prøve deg på quizen på neste side!
+</p>
+
+<div id="pilFrem" style="position: relative;"><a href="notequizBilde.html"><img src="pilFrem.png" id="pilFrem" style="position: absolute; left:80%; top:170px;"></a></div>
+
+
+
+
+
+</div> <!--/content -->
+<footer>
+<p>Laget av gruppe 2</p>
+</footer>
+</div> <!--/container-->
+</body>
+</html>

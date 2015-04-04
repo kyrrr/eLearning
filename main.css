@@ -1,0 +1,38 @@
+
+html,button,input {
+  color: #2c3e50;
+}
+
+body {
+  font-size: 1em;
+  line-height: 1.4;
+  font-family: helveticaneue;
+  }
+  
+#container {
+  margin: auto;
+  max-width: 640px;
+  padding-top: 90px;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#Artimage {
+  z-index: -1;
+  position: absolute;
+  padding-left: 700px;
+  padding-top: 100px;
+ }
+
+#wrapper {
+  position: relative;
+  width: 800px;
+  min-height: 400px;
+  margin: 100px auto;
+  color: #333;
+}

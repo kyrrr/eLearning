@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="icon" href="mininote.png" type="image/gif">
+<link rel="stylesheet" href="notestyle.css" type="text/css">
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="app2.js"></script>
+<script src="toner.js"></script>
+<script src="skalaer.js"></script>
+<title>Lek og moro</title>
+</head>
+
+<body>
+<div id="container">
+<nav>
+<img src="mininote.png" />
+  <a href="index.html">HJEM</a> |
+  <a href="/884618/elaering/rytmetakt1.html">Rytmer og takter</a> |
+  <a href="/884618/elaering/noter1.html">Noter</a> |
+  <a href="/kek/">Gehør</a> |
+  <a href="/884618/elaering/oppsummeringQuiz.html">Stor quiz</a>
+  <img src="mininote.png" />
+</nav>
+
+
+    
+<div id="content">
+
+<script type="text/javascript">
+$(function() {
+    $(document).keydown(function(e) {
+        switch (e.keyCode) {
+        case 65:
+            $('#pgC a')[0].onclick();
+            break;
+        case 87:
+            $('#pgCsharp a')[0].onclick();
+            break;
+        }
+    });
+});
+
+</script>
+
+<input type="button" id="pgC" value="C" onClick="pgC()">
+<input type="button" id="pgCsharp" value="C#" onClick="pgCsharp()">
+<input type="button" id="D" value="start" onClick="D()">
+<input type="button" id="D#" value="start" onClick="D#()">
+<input type="button" id="E" value="start" onClick="E()">
+<input type="button" id="F" value="start" onClick="F()">
+<input type="button" id="F#" value="start" onClick="F#()">
+<input type="button" id="G" value="start" onClick="G()">
+<input type="button" id="G#" value="start" onClick="G#()">
+<input type="button" id="A" value="start" onClick="A()">
+<input type="button" id="Hb" value="start" onClick="Hb()">
+<input type="button" id="C2" value="start" onClick="C2()">
+
+		
+</div> <!--/content -->
+<footer>
+<p>Laget av gruppe 2</p>
+</footer>
+</div> <!--/container-->
+</body>
+</html>

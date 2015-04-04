@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="icon" href="mininote.png" type="image/gif">
+<link rel="stylesheet" href="notestyle.css" type="text/css">
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="app2.js"></script>
+<script src="toner.js"></script>
+<script src="skalaer.js"></script>
+<title>Rytmer og takter</title>
+</head>
+
+<body>
+<div id="container">
+<nav>
+<img src="mininote.png" />
+  <a href="index.html">HJEM</a> |
+  <a href="/884618/elaering/rytmetakt1.html">Rytmer og takter</a> |
+  <a href="/884618/elaering/noter1.html">Noter</a> |
+  <a href="/884618/elaering/gehor.html">Gehør</a> |
+  <a href="/884618/elaering/oppsummeringQuiz.html">Stor quiz</a>
+  <img src="mininote.png" />
+</nav>
+
+
+    
+<div id="content">
+<h3>Takter</h3>
+<p>
+
+4/4 er langt i fra den eneste taktarten man bruker, selv om den er den aller vanligste. <br/>
+
+Trykk på start for å høre dette musikkeksempelet, og følg streken over skjermen.
+
+<canvas id="myCanvas" width="578" height="150">
+</canvas>
+
+<script>
+ function start()
+  {
+      window.requestAnimFrame = (function(callback) {
+        return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+        function(callback) {
+          window.setTimeout(callback, 1000 / 60);
+        };
+      })();
+
+	  
+ 
+
+		
+      	function drawRectangle(myRectangle, context) {
+        context.beginPath();
+        context.rect(myRectangle.x, myRectangle.y, myRectangle.width, myRectangle.height);
+        context.fillStyle = '#8ED6FF';
+        context.fill();
+        context.lineWidth = myRectangle.borderWidth;
+        context.strokeStyle = 'black';
+        context.stroke();
+      
+      }
+      
+      
+      function animate(myRectangle, canvas, context, startTime) {
+        // update
+        var time = (new Date()).getTime() - startTime;
+
+        var linearSpeed = 62.7;
+        // pixels / second
+        var newX = linearSpeed * time / 1000;
+
+        if(newX < canvas.width - myRectangle.width - myRectangle.borderWidth / 2) {
+          myRectangle.x = newX;
+        }
+
+        // clear
+        context.clearRect(0, 0, canvas.width, canvas.height);
+
+        drawRectangle(myRectangle, context);
+
+        // request new frame
+        requestAnimFrame(function() {
+          animate(myRectangle, canvas, context, startTime);
+        });
+      }
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+
+      var myRectangle = {
+        x: 10,
+        y: 95,
+        width: 0,
+        height: 30,
+        borderWidth: 5
+      };
+      
+
+      //wait one second before starting animation
+      setTimeout(function() {
+        var startTime = (new Date()).getTime();
+        animate(myRectangle, canvas, context, startTime);
+      }, 0);
+      
+}
+
+ </script>
+<br/>
+<input type="button" id="start" value="start" onClick="start();eksempel1();"><br/>
+<br/><br/>
+
+Du kjente kanskje igjen at det var starten på <em>Lisa gikk til skolen</em>? En godt kjent melodi som går i 4/4.<br/>
+
+Som tidligere sagt, så innebærer 4/4 at man for hver takt teller fire slag, hvor hvert slag er en fjerdedel.<br/>
+
+Hva tror du da gjelder for taktarter som tre fjerdedeler og fem fjerdedeler?<br/>
+
+
+<canvas id="myCanvas2" width="847" height="100">
+</canvas>
+
+<script>
+ function start2()
+  {
+      window.requestAnimFrame = (function(callback) {
+        return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+        function(callback) {
+          window.setTimeout(callback, 1000 / 60);
+        };
+      })();
+
+	  
+ 
+
+		
+      	function drawRectangle(myRectangle, context) {
+        context.beginPath();
+        context.rect(myRectangle.x, myRectangle.y, myRectangle.width, myRectangle.height);
+        context.fillStyle = '#8ED6FF';
+        context.fill();
+        context.lineWidth = myRectangle.borderWidth;
+        context.strokeStyle = 'black';
+        context.stroke();
+      
+      }
+      
+      
+      function animate(myRectangle, canvas, context, startTime) {
+        // update
+        var time = (new Date()).getTime() - startTime;
+
+        var linearSpeed = 100;
+        // pixels / second
+        var newX = linearSpeed * time / 1000;
+
+        if(newX < canvas.width - myRectangle.width - myRectangle.borderWidth / 2) {
+          myRectangle.x = newX;
+        }
+
+        // clear
+        context.clearRect(0, 0, canvas.width, canvas.height);
+
+        drawRectangle(myRectangle, context);
+
+        // request new frame
+        requestAnimFrame(function() {
+          animate(myRectangle, canvas, context, startTime);
+        });
+      }
+      var canvas = document.getElementById('myCanvas2');
+      var context = canvas.getContext('2d');
+
+      var myRectangle = {
+        x: 10,
+        y: 21,
+        width: 0,
+        height: 41,
+        borderWidth: 5
+      };
+      
+
+      //wait one second before starting animation
+      setTimeout(function() {
+        var startTime = (new Date()).getTime();
+        animate(myRectangle, canvas, context, startTime);
+      }, 0);
+      
+}
+
+ </script>
+<br/>
+<input type="button" id="start2" value="start" onClick="start2();trefirefem()"><br/>
+<br/><br/>
+
+
+Det samme prinsippet gjelder her. I en 3/4 teller man tre fjerdedeler for hver takt. I en 5/4 teller man da fem fjerdedeler.<br/><br/>
+
+<br/>
+
+Du har frem til nå lest om rytmer og takter, og hvordan de henger sammen. På neste er en kort test som viser denne sammenhengen: Én takt er ikke riktig fyllt ut og du må finne ut hvilken det er.<br/><br/>
+Tenk på noteverdier og taktarter! Etter dette igjen kommer det en kort quiz som tester deg på noteverdier og taktarter.<br/><br/>
+
+</p><p>
+<a href="dragdropQuiz2.html"><img src="pilFrem.png" id="pilFrem"/></a>
+</p>
+
+</div> <!--/content -->
+<footer>
+<p>Laget av gruppe 2</p>
+</footer>
+</div> <!--/container-->
+</body>
+</html>

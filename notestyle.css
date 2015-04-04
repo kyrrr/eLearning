@@ -1,0 +1,175 @@
+body {
+	background-image: url(wood.png);
+}
+#container {
+	width: 1073px;
+    margin-top: 50px;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+nav, nav a {
+	text-align: center;
+	font-size: .85rem;
+	font-weight: 500;
+	height: 50px;
+	letter-spacing: .5rem;
+	line-height: 50px;
+	text-shadow: 0 1px 1px rgba(0,0,0,.1);
+	text-transform: uppercase;
+	text-decoration: none;
+	color:#333;
+}
+nav a:hover, a:active {
+	color: #F0F0F0;
+	font-weight: normal;
+}
+footer {
+	text-align: center;
+}
+#content {
+	background-image: url(paper.png);
+	background-repeat: no-repeat;
+	width:1073px;
+	height:825px;
+	padding-top: 50px;
+}
+#content p,  #content table, #content h3, #div1, #answerDiv, #resultDiv{
+	width: 850px;
+	padding-left: 90px;
+	font-family: Verdana;
+	font-size: 11px;
+	line-height: 110%;
+	color: #333333;
+}
+h2 {
+	width: 900px;
+	padding-left: 90px;
+	font-size: 36px;
+	font-weight: 400;
+	color: #2d2d2d;
+}
+
+/*quiz*/
+
+html,button,input {
+  color: #2c3e50;
+}
+
+#Artimage {
+  /*z-index: 0;
+  position: absolute;
+  padding-left: 400px;
+  
+padding-top: 100px;*/
+ }
+
+#wrapper {
+  position: relative;
+  width: 800px;
+  min-height: 400px;
+  margin: 100px auto;
+  color: #333;
+}
+
+#play {
+ 	position: absolute;
+ 	margin-left: 500px;
+  	
+
+}
+
+#choices {
+	width: 850px;
+	padding-left: 90px;
+	font-family: Verdana;
+	font-size: 11px;
+	line-height: 110%;
+	color: #333333;
+}
+
+#answerDiv{
+	position: relative;
+	right: -100px;
+
+}
+
+#storeBilder{
+	position: relative;
+	height: 300px;
+	width: 300px;
+	
+
+}
+
+#pC {
+	position: absolute;
+	border: 1px;
+	border-color: black;
+
+}
+
+#pauseImg{
+	height: 69px;
+	
+}
+
+#myCanvas { 
+		background:url(lisaUtenbg.png);
+		background-position: 0px 80px;
+		background-repeat: no-repeat;
+		}
+		
+#myCanvas2 {
+	background:url(trefirefem.png);
+	
+	background-repeat: no-repeat;
+}
+
+#myCanvasCgangerTre{
+	background:url(cgangertre.png);
+	
+	background-repeat: repeat-y;
+	
+}
+
+
+
+#instrumentSimulator{
+		position: relative;
+		height: 20%;
+		width: 50%;
+		text-align:center;
+		/*background:url(lisaUtenbg.png);
+		background-position: 80px 80px 80px 80px;
+		background-repeat: no-repeat;	*/	
+}
+    
+    
+    
+    
+table.fixed {
+				table-layout:fixed;
+                overflow: hidden;
+                border: 0px;
+                width: 100px;
+                height: 100px;
+                padding: 0.5em;
+                margin: 10px;
+                
+                }
+
+table.fixed th, table.fixed td {
+                table-layout:fixed;
+                overflow: hidden;
+                border: 1px solid black;
+                width: 100px;
+                height: 100px;
+                padding: 0.5em;
+                margin: 10px;
+            }
+            
+
+            
+
+

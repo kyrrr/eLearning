@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="icon" href="mininote.png" type="image/gif">
+<link rel="stylesheet" href="notestyle.css" type="text/css">
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="drag'n'drop.js"></script>
+<title>DragDrop</title>
+
+</head>
+
+<body>
+<div id="container">
+<nav>
+<img src="mininote.png" />
+  <a href="index.html">HJEM</a> |
+  <a href="./notequizBilde.html">link</a> |
+  <a href="./gehor.html">linketi</a> |
+  <a href="/kek/">linklink</a>
+  <img src="mininote.png" />
+</nav>
+
+    
+<div id="content">
+ 
+  <script src="drag'n'drop.js"></script>
+        <h2>Ranger disse pokèmon fra kulest til minst kul. </h2>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<table class="fixed" id='table-draggable1' cellpadding="0" cellspacing="0" border="0">  
+                <tbody class="connectedSortable">
+                    <tr>
+                    <td class="DragndropContainer" id="q1"></td>
+                    <td class="DragndropContainer" id="q2"></td>
+                    <td class="DragndropContainer" id="q3"></td>
+                    <td class="DragndropContainer" id="q4"></td>
+                </tr>
+            </table>
+        </div>
+        
+		<br />
+        
+		<div id="answerDiv" ondrop="drop(event)" ondragover="allowDrop(event)" class="DragndropOriginalContainer">
+			<img class="DragndropItem" id="a1" src="http://oyster.ignimgs.com/mediawiki/apis.ign.com/pokemon-blue-version/e/e6/Farfetchd.gif" draggable="true" ondragstart="drag(event)" width="100" height="100">
+			<img class="DragndropItem" id="a2" src="http://cdn.bulbagarden.net/upload/thumb/a/af/102Exeggcute.png/250px-102Exeggcute.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
+			<img class="DragndropItem" id="a3" src="http://oyster.ignimgs.com/mediawiki/apis.ign.com/pokemon-blue-version/9/90/Magnemite.gif" draggable="true" ondragstart="drag(event)" width="100" height="100">
+			<img class="DragndropItem" id="a4" src="http://img.pokemondb.net/artwork/mudkip.jpg" draggable="true" ondragstart="drag(event)" width="100" height="100">
+       
+        <br />
+		<input type="button" value="Continue" id="checkQuizScore" onclick="checkQuizScore()">
+        <input type="reset" value="Reset" id="reset" name="reset" onclick="resetDragndrop()">
+        </div>
+		<br />
+		<div id="resultDiv">
+		</div>
+        
+</div>
+<footer>
+<p>Made by Noona</p>
+</footer>
+</div> <!--/container-->
+</body>
+</html>
+
+
+
+ 		
+ 		
+
+
+        
