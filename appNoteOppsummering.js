@@ -11,7 +11,7 @@ var quiz = [
 {
   "question": "Om en tone har fortegnet b, hvordan endres tonen?",
   "choices": ["Den blir høyere", "Den blir lavere", "Den endres ikke"],
-  "correct": "Den bli lavere",
+  "correct": "Den blir lavere",
   "image": "notequizAss.png"
 }, 
 
