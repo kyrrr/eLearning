@@ -139,6 +139,7 @@ function showFinalResults() {
     Math.round(score / quiz.length * 100) + "%<h3><br/><br/>"
     + "<a href='noter4.html'><img src='pilFrem.png' id='pilFrem'/></a>";
     document.cookie=Math.round(score / quiz.length * 100);
+	leggTil(score);
 
 }
 

@@ -7,7 +7,6 @@ var quiz = [
   "correct": "Fortegn",
   "image": "tom.png"
 },
-
 {
   "question": "Om en tone har fortegnet b, hvordan endres tonen?",
   "choices": ["Den blir høyere", "Den blir lavere", "Den endres ikke"],
