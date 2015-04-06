@@ -13,7 +13,7 @@ localStorage.setItem("teller",teller);
 }
 
 function skriv(){
-return (" <h3> Totalt antall riktige fra alt er: " + teller + "(av 30), " + Math.round(teller*100/30) + "% </h3>");
+return (" <h3> Totalt antall riktige fra alle quizzer er: " + teller + " (av 30), " + Math.round(teller*100/30) + "% </h3>");
 }
 
 

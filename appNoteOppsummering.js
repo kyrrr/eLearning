@@ -141,7 +141,7 @@ function showFinalResults() {
     "<h3>Her er dine resultater:</h3>" +
     "<h3>" + score + " av " + quiz.length + " spørsmål, " +
     Math.round(score / quiz.length * 100) + "%<h3><br/><br/>"
-    + "<a href='gehorstart.html'><img src='pilFrem.png' id='pilFrem'/></a>";
+    + "<a href='gehor1.html'><img src='pilFrem.png' id='pilFrem'/></a>";
     document.cookie=Math.round(score / quiz.length * 100);
     console.log(document.cookie);
 	leggTil(score);

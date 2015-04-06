@@ -7,28 +7,28 @@ var quiz = [
   "question": "Hvilken verdi har denne noten?",
   "choices": ["Helnote", "Halvnote", "Fjerdedel"],
   "correct": "Halvnote",
-  "image": "https://home.hbv.no/884618/elaering/quizbilder/note3.png"
+  "image": "note3.png"
 },
 
 {
   "question": "Hvilken verdi har denne pausen?",
   "choices": ["Helnote", "Halvnote", "Fjerdedel"],
   "correct": "Fjerdedel",
-  "image": "https://home.hbv.no/884618/elaering/quizbilder/note1.png"
+  "image": "note1.png"
 }, 
 
 {
   "question": "Hvor mange takter har man i et musikkstykke?",
   "choices": ["Fire", "Seksten", "Så mange man vil"],
   "correct": "Så mange man vil",
-  //"image": "https://home.hbv.no/884618/elaering/quizbilder/note4.png"
+  "image": "tom.png"
 }, 
 
 {
   "question": "Hvor mange fjerdedeler trenger man for å fylle in takt i taktarten 3/4?",
   "choices": ["Seks", "Fire", "Tre"],
-  "correct": "Tre"
-  //"image": "https://home.hbv.no/884618/elaering/quizbilder/note2.png"
+  "correct": "Tre",
+  "image": "taktart1.png"
 }, 
 
 
@@ -36,7 +36,7 @@ var quiz = [
   "question": "Hvilken taktart er dette?",
   "choices": ["Tre fjerdedel", "Fire fjerdedel", "Fem fjerdedel"],
   "correct": "Fire fjerdedel",
-  "image": "https://home.hbv.no/884618/elaering/quizbilder/taktart1.png"
+  "image": "taktart1.png"
 }, 
 
 
@@ -44,22 +44,71 @@ var quiz = [
   "question": "Hvilken taktart er dette?",
   "choices": ["Tre fjerdedel", "Fire fjerdedel", "Fem fjerdedel"],
   "correct": "Tre fjerdedel",
-  "image": "https://home.hbv.no/884618/elaering/quizbilder/taktart2.png"
+  "image": "taktart2.png"
 },
 
 {
   "question": "Hvor mange åttendeler trengs for å fylle en takt i denne taktarten?",
   "choices": ["Seksten", "Åtte", "Fire"],
   "correct": "Åtte",
-  "image": "https://home.hbv.no/884618/elaering/quizbilder/firefjerdedel.png"
+  "image": "firefjerdedel.png"
 },
 
 {
   "question": "Hvilken verdi har denne pausen?",
   "choices": ["Sekstendel", "Åttendel", "Halvnote"],
   "correct": "Sekstendel",
-  "image": "https://home.hbv.no/884618/elaering/quizbilder/pause4.png"
+  "image": "pause2.png"
+},
+
+{
+
+  "question": "Hvilket intervall? (trykk på Intervall 1)",
+  "choices": ["Stor sekund", "Oktav", "Liten sekund"],
+  "correct": "Oktav",
+  "image": "tom.png",
+  "play": document.getElementById("play1").innerHTML="<input type='button' value='Intervall 1' onclick='intervall1()'/>"
+},
+
+{
+
+  "question": "Hvilket intervall? (trykk på Intervall 2)",
+  "choices": ["Stor sekund", "Stor ters", "Liten sekund"],
+  "correct": "Liten sekund",
+  "image": "tom.png",
+  "play": document.getElementById("play2").innerHTML="<input type='button' value='Intervall 2' onclick='intervall2()'/>"
+  
+},
+
+{
+
+  "question": "Hvilket intervall? (trykk på Intervall 3)",
+  "choices": ["Stor ters", "Stor sekund", "Oktav"],
+  "correct": "Stor ters",
+  "image": "tom.png",
+  "play": document.getElementById("play3").innerHTML="<input type='button' value='Intervall 3' onclick='intervall3()'/>"
+  
+},
+
+{
+  "question": "Hvilket intervall? (trykk på Intervall 4)",
+  "choices": ["Oktav", "Stor sekund", "Liten sekund"],
+  "correct": "Stor sekund",
+  "image": "tom.png",
+  "play": document.getElementById("play4").innerHTML="<input type='button' value='Intervall 4' onclick='intervall4()'/>"
+  
+},
+
+{
+  "question": "Hvilket intervall? (trykk på Intervall 5)",
+  "choices": ["Stor sekund", "Liten sekund", "Stor ters"],
+  "correct": "Liten sekund",
+  "image": "tom.png",
+  "play": document.getElementById("play5").innerHTML="<input type='button' value='Intervall 5' onclick='intervall5()'/>"
+  
 }
+
+
 ];
 
 

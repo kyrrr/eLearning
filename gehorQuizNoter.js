@@ -53,3 +53,57 @@
 			
 			player.play(notes);
 		}
+
+		//quiz2
+
+		function intervall1() {
+			var notes = [['C3',1],['C4',1]];
+			
+			var player = new simple_player();
+
+			player.tempo = 60;
+			
+			player.play(notes);
+		}
+
+
+
+			function intervall2() {
+			var notes = [['A3',1],['A#3',1]];
+			
+			var player = new simple_player();
+
+			player.tempo = 60;
+			
+			player.play(notes);
+		}
+
+			function intervall3() {
+			var notes = [['C3',1],['E3',1]];
+			
+			var player = new simple_player();
+
+			player.tempo = 60;
+			
+			player.play(notes);
+		}
+
+			function intervall4() {
+			var notes = [['G3',1],['A3',1]];
+			
+			var player = new simple_player();
+
+			player.tempo = 60;
+			
+			player.play(notes);
+		}
+
+			function intervall5() {
+			var notes = [['D4',1],['D#4',1]];
+			
+			var player = new simple_player();
+
+			player.tempo = 60;
+			
+			player.play(notes);
+		}

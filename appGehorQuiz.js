@@ -3,46 +3,46 @@ $(document).ready(function() {
 var quiz = [
 {
 
-  "question": "Hvilken skala? (trykk på Skala 1)",
-  "choices": ["Moll", "Dur"],
-  "correct": "Dur",
-  "play": document.getElementById("play1").innerHTML="<input type='button' value='Skala 1' onclick='skala1()'/>"
+  "question": "Hvilket intervall? (trykk på Intervall 1)",
+  "choices": ["Stor sekund", "Oktav", "Liten sekund"],
+  "correct": "Oktav",
+  "play": document.getElementById("play1").innerHTML="<input type='button' value='Intervall 1' onclick='intervall1()'/>"
 }, 
 
 {
 
-  "question": "Hvilken skala? (trykk på Skala 2)",
-
-  "choices": ["Moll", "Dur"],
-  "correct": "Moll",
-  "play": document.getElementById("play2").innerHTML="<input type='button' value='Skala 2' onclick='skala2()'/>"
+  "question": "Hvilket intervall? (trykk på Intervall 2)",
+  "choices": ["Stor sekund", "Stor ters", "Liten sekund"],
+  "correct": "Liten sekund",
+  "play": document.getElementById("play2").innerHTML="<input type='button' value='Intervall 2' onclick='intervall2()'/>"
   
 },
 
 {
 
-  "question": "Hvilken skala? (trykk på Skala 3)",
-  "choices": ["Moll", "Dur"],
-  "correct": "Moll",
-  "play": document.getElementById("play3").innerHTML="<input type='button' value='Skala 3' onclick='skala3()'/>"
+  "question": "Hvilket intervall? (trykk på Intervall 3)",
+  "choices": ["Stor ters", "Stor sekund", "Oktav"],
+  "correct": "Stor ters",
+  "play": document.getElementById("play3").innerHTML="<input type='button' value='Intervall 3' onclick='intervall3()'/>"
   
 },
 
 {
-  "question": "Hvilken skala? (trykk på Skala 4)",
-  "choices": ["Moll", "Dur"],
-  "correct": "Dur",
-  "play": document.getElementById("play4").innerHTML="<input type='button' value='Skala 4' onclick='skala4()'/>"
+  "question": "Hvilket intervall? (trykk på Intervall 4)",
+  "choices": ["Oktav", "Stor sekund", "Liten sekund"],
+  "correct": "Stor sekund",
+  "play": document.getElementById("play4").innerHTML="<input type='button' value='Intervall 4' onclick='intervall4()'/>"
   
 },
 
 {
-  "question": "Hva er skalaer bygget opp av?",
-  "choices": ["Takter", "Intervaller", "Rytmer"],
-  "correct": "Intervaller",
-  //"play": document.getElementById("play4").innerHTML="<input type='button' value='Skala 4' onclick='skala4()'/>"
+  "question": "Hvilket intervall? (trykk på Intervall 5)",
+  "choices": ["Stor sekund", "Liten sekund", "Stor ters"],
+  "correct": "Liten sekund",
+  "play": document.getElementById("play5").innerHTML="<input type='button' value='Intervall 5' onclick='intervall5()'/>"
   
 }
+
 
 
 ];
@@ -150,7 +150,7 @@ function showFinalResults() {
     "<h3>Du har fått </h3>" +
     "<h3>" + score + " av  " + quiz.length + " riktige, " +
     Math.round(score / quiz.length * 100) + "%<h2>" +
-	"<a href='gehor5.html'> <img src='pilFrem.png' id='pilFrem'/> </a>";
+	"<a href='merKommer.html'> <img src='pilFrem.png' id='pilFrem'/> </a>";
 	leggTil(score);
 }
 
