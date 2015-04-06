@@ -165,8 +165,7 @@ function showFinalResults() {
     "<h3>Her er dine resultater:</h3>" +
     "<h3>" + score + " av " + quiz.length + " spørsmål, " +
     Math.round(score / quiz.length * 100) + "%</h3><br/><br/>"
-	+ total
-    + " <p> <a href='noter1.html' ><img src='pilFrem.png' id='pilFrem'/></a> </p>";
+	+ total;
     // document.cookie=Math.round(score / quiz.length * 100); -->
     //console.log(document.cookie);
 

@@ -161,9 +161,11 @@ function showFinalResults() {
     "<h3>Her er dine resultater:</h3>" +
     "<h3>" + score + " av " + quiz.length + " spørsmål, " +
     Math.round(score / quiz.length * 100) + "%<h3><br/><br/>"
-    + "Godt gjennomført! Nå kan du starte på temaet <a href='noter1.html'>Noter</a> om du vil!";
+    + "Godt gjennomført! Nå kan du starte på temaet noter!" + 
+	"<a href='noter1.html'> <img src='pilFrem.png' id='pilFrem'/> </a>";
     document.cookie=Math.round(score / quiz.length * 100);
     console.log(document.cookie);
+	leggTil(score);
 }
 
 window.addEventListener("load", askQuestion, false);
