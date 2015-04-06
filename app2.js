@@ -2,15 +2,14 @@ $(document).ready(function() {
 
 var quiz = [
 {
-  "question": "Hvilken skala (trykk på spill)",
+  "question": "Hvilken skala (trykk på Skala 1)",
   "choices": ["Moll", "Dur"],
   "correct": "Dur",
   "play": document.getElementById("play1").innerHTML="<input type='button' value='Skala 1' onclick='skala1()'/>"
-  
 }, 
 
 {
-  "question": "Hvilken skala (trykk på spill)",
+  "question": "Hvilken skala (trykk på Skala 2)",
   "choices": ["Moll", "Dur"],
   "correct": "Moll",
   "play": document.getElementById("play2").innerHTML="<input type='button' value='Skala 2' onclick='skala2()'/>"
@@ -18,7 +17,7 @@ var quiz = [
 },
 
 {
-  "question": "Hvilket intervall (trykk på intervall 1)",
+  "question": "Hvilket intervall (trykk på Intervall 1)",
   "choices": ["Kvint", "Stor ters", "Stor sekund"],
   "correct": "Stor ters",
   "play": document.getElementById("play3").innerHTML="<input type='button' value='Intervall 1' onclick='intervall1()'/>"
@@ -49,7 +48,7 @@ function askQuestion() {
   var choices = quiz[currentQuestion].choices,
     choicesHtml = "";
     
- //$("play") = quiz[currentQuestion].play;
+
 
   // loop through choices, and create radio buttons
   for (var i = 0; i < choices.length; i++) {
@@ -71,6 +70,7 @@ function askQuestion() {
     scoreContainer.textContent = "Score: 0 right answers out of " +
       quiz.length + " possible.";
     submitBtn.textContent = "Submit Answer";
+	
   }
 }
 
@@ -123,10 +123,12 @@ function checkAnswer() {
 }
 
 function showFinalResults() {
-  content.innerHTML = "<h2>You've Completed the Quiz!</h2>" +
-    "<h2>Below are your results:</h2>" +
-    "<h2>" + score + " out of " + quiz.length + " questions, " +
-    Math.round(score / quiz.length * 100) + "%<h2>";
+  content.innerHTML = "<h3>Godt jobbet!</h3>" +
+    "<h3>Du har fått </h3>" +
+    "<h3>" + score + " av  " + quiz.length + " riktige, " +
+    Math.round(score / quiz.length * 100) + "%<h2>" +
+	"<a href='gehor1.html'> <img src='pilFrem.png' id='pilFrem'/> </a>";
+	leggTil(score);
 }
 
 window.addEventListener("load", askQuestion, false);
