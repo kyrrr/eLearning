@@ -2,15 +2,14 @@ $(document).ready(function() {
 
 var quiz = [
 {
-  "question": "Hvilken skala (trykk på spill)",
+  "question": "Hvilken skala? (trykk på Skala 1)",
   "choices": ["Moll", "Dur"],
   "correct": "Dur",
   "play": document.getElementById("play1").innerHTML="<input type='button' value='Skala 1' onclick='skala1()'/>"
-  
 }, 
 
 {
-  "question": "Hvilken skala (trykk på spill)",
+  "question": "Hvilken skala? (trykk på Skala 2)",
   "choices": ["Moll", "Dur"],
   "correct": "Moll",
   "play": document.getElementById("play2").innerHTML="<input type='button' value='Skala 2' onclick='skala2()'/>"
@@ -18,12 +17,29 @@ var quiz = [
 },
 
 {
-  "question": "Hvilket intervall (trykk på intervall 1)",
-  "choices": ["Kvint", "Stor ters", "Stor sekund"],
-  "correct": "Stor ters",
-  "play": document.getElementById("play3").innerHTML="<input type='button' value='Intervall 1' onclick='intervall1()'/>"
+  "question": "Hvilken skala? (trykk på Skala 3)",
+  "choices": ["Moll", "Dur"],
+  "correct": "Moll",
+  "play": document.getElementById("play3").innerHTML="<input type='button' value='Skala 3' onclick='skala3()'/>"
+  
+},
+
+{
+  "question": "Hvilken skala? (trykk på Skala 4)",
+  "choices": ["Moll", "Dur"],
+  "correct": "Dur",
+  "play": document.getElementById("play4").innerHTML="<input type='button' value='Skala 4' onclick='skala4()'/>"
+  
+},
+
+{
+  "question": "Hva er skalaer bygget opp av?",
+  "choices": ["Takter", "Intervaller", "Rytmer"],
+  "correct": "Intervaller",
+  //"play": document.getElementById("play4").innerHTML="<input type='button' value='Skala 4' onclick='skala4()'/>"
   
 }
+
 
 ];
 
@@ -49,7 +65,7 @@ function askQuestion() {
   var choices = quiz[currentQuestion].choices,
     choicesHtml = "";
     
- //$("play") = quiz[currentQuestion].play;
+
 
   // loop through choices, and create radio buttons
   for (var i = 0; i < choices.length; i++) {
@@ -68,16 +84,17 @@ function askQuestion() {
 
   // setup for the first time
   if (currentQuestion === 0) {
-    scoreContainer.textContent = "Score: 0 right answers out of " +
-      quiz.length + " possible.";
-    submitBtn.textContent = "Submit Answer";
+    scoreContainer.textContent = "Poengsum: 0 rette av " +
+      quiz.length + " mulige.";
+    submitBtn.textContent = "Sjekk svar";
+	
   }
 }
 
 function checkAnswer() {
   // are we asking a question, or proceeding to next question?
   if (askingQuestion) {
-    submitBtn.textContent = "Next Question";
+    submitBtn.textContent = "Neste spørsmål";
     askingQuestion = false;
 
     // determine which radio button they clicked
@@ -105,13 +122,13 @@ function checkAnswer() {
       labelStyle.color = "red";
     }
 
-    scoreContainer.textContent = "Score: " + score + " right answers out of " +
-      quiz.length + " possible.";
+    scoreContainer.textContent = "Poengsum: " + score + " rette av " +
+      quiz.length + " mulige.";
   } else { // move to next question
     // setting up so user can ask a question
     askingQuestion = true;
     // change button text back to "Submit Answer"
-    submitBtn.textContent = "Submit Answer";
+    submitBtn.textContent = "Sjekk svar";
     // if we're not on last question, increase question number
     if (currentQuestion < quiz.length - 1) {
       currentQuestion++;
@@ -123,13 +140,14 @@ function checkAnswer() {
 }
 
 function showFinalResults() {
-  content.innerHTML = "<h2>You've Completed the Quiz!</h2>" +
-    "<h2>Below are your results:</h2>" +
-    "<h2>" + score + " out of " + quiz.length + " questions, " +
-    Math.round(score / quiz.length * 100) + "%<h2>";
+  content.innerHTML = "<h3>Godt jobbet!</h3>" +
+    "<h3>Du har fått </h3>" +
+    "<h3>" + score + " av  " + quiz.length + " riktige, " +
+    Math.round(score / quiz.length * 100) + "%<h2>" +
+	"<a href='gehor5.html'> <img src='pilFrem.png' id='pilFrem'/> </a>";
+	leggTil(score);
 }
 
 window.addEventListener("load", askQuestion, false);
 submitBtn.addEventListener("click", checkAnswer, false);
 });
-
