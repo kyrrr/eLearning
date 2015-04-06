@@ -2,22 +2,17 @@ $(document).ready(function() {
 
 var quiz = [
 {
-<<<<<<< HEAD
+
   "question": "Hvilken skala? (trykk på Skala 1)",
-=======
-  "question": "Hvilken skala (trykk på Skala 1)",
->>>>>>> origin/master
   "choices": ["Moll", "Dur"],
   "correct": "Dur",
   "play": document.getElementById("play1").innerHTML="<input type='button' value='Skala 1' onclick='skala1()'/>"
 }, 
 
 {
-<<<<<<< HEAD
+
   "question": "Hvilken skala? (trykk på Skala 2)",
-=======
-  "question": "Hvilken skala (trykk på Skala 2)",
->>>>>>> origin/master
+
   "choices": ["Moll", "Dur"],
   "correct": "Moll",
   "play": document.getElementById("play2").innerHTML="<input type='button' value='Skala 2' onclick='skala2()'/>"
@@ -25,7 +20,7 @@ var quiz = [
 },
 
 {
-<<<<<<< HEAD
+
   "question": "Hvilken skala? (trykk på Skala 3)",
   "choices": ["Moll", "Dur"],
   "correct": "Moll",
@@ -50,7 +45,7 @@ var quiz = [
 }
 
 
-=======
+
   "question": "Hvilket intervall (trykk på Intervall 1)",
   "choices": ["Kvint", "Stor ters", "Stor sekund"],
   "correct": "Stor ters",
@@ -58,7 +53,7 @@ var quiz = [
   
 }
 
->>>>>>> origin/master
+
 ];
 
 
@@ -102,15 +97,9 @@ function askQuestion() {
 
   // setup for the first time
   if (currentQuestion === 0) {
-<<<<<<< HEAD
     scoreContainer.textContent = "Poengsum: 0 rette av " +
       quiz.length + " mulige.";
     submitBtn.textContent = "Sjekk svar";
-=======
-    scoreContainer.textContent = "Score: 0 right answers out of " +
-      quiz.length + " possible.";
-    submitBtn.textContent = "Submit Answer";
->>>>>>> origin/master
 	
   }
 }
@@ -118,11 +107,7 @@ function askQuestion() {
 function checkAnswer() {
   // are we asking a question, or proceeding to next question?
   if (askingQuestion) {
-<<<<<<< HEAD
     submitBtn.textContent = "Neste spørsmål";
-=======
-    submitBtn.textContent = "Next Question";
->>>>>>> origin/master
     askingQuestion = false;
 
     // determine which radio button they clicked
@@ -150,22 +135,15 @@ function checkAnswer() {
       labelStyle.color = "red";
     }
 
-<<<<<<< HEAD
+
     scoreContainer.textContent = "Poengsum: " + score + " rette av " +
       quiz.length + " mulige.";
-=======
-    scoreContainer.textContent = "Score: " + score + " right answers out of " +
-      quiz.length + " possible.";
->>>>>>> origin/master
+
   } else { // move to next question
     // setting up so user can ask a question
     askingQuestion = true;
     // change button text back to "Submit Answer"
-<<<<<<< HEAD
     submitBtn.textContent = "Sjekk svar";
-=======
-    submitBtn.textContent = "Submit Answer";
->>>>>>> origin/master
     // if we're not on last question, increase question number
     if (currentQuestion < quiz.length - 1) {
       currentQuestion++;
@@ -181,19 +159,12 @@ function showFinalResults() {
     "<h3>Du har fått </h3>" +
     "<h3>" + score + " av  " + quiz.length + " riktige, " +
     Math.round(score / quiz.length * 100) + "%<h2>" +
-<<<<<<< HEAD
 	"<a href='gehor5.html'> <img src='pilFrem.png' id='pilFrem'/> </a>";
-=======
-	"<a href='gehor1.html'> <img src='pilFrem.png' id='pilFrem'/> </a>";
->>>>>>> origin/master
 	leggTil(score);
 }
 
 window.addEventListener("load", askQuestion, false);
 submitBtn.addEventListener("click", checkAnswer, false);
-<<<<<<< HEAD
-});
-=======
+
 });
 
->>>>>>> origin/master
