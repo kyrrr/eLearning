@@ -13,7 +13,7 @@
 		//Playground
 	
 		function pgC(){
-			var notes = [['C3',4]]; 
+			var notes = [['C3',2]]; 
 			
 			var player = new simple_player();
 			//player.tempo = 270;
@@ -23,7 +23,7 @@
 		
 		
 		function pgCiss(){
-			var notes = [['C#3',4]]; 
+			var notes = [['C#3',2]]; 
 			
 			var player = new simple_player();
 			//player.tempo = 270;
@@ -33,7 +33,7 @@
 		
 		
 		function pgD(){
-			var notes = [['D3',4]]; 
+			var notes = [['D3',2]]; 
 			
 			var player = new simple_player();
 			//player.tempo = 270;
@@ -42,7 +42,7 @@
 		}
 		
 			function pgEb(){
-			var notes = [['EB3',4]]; 
+			var notes = [['EB3',2]]; 
 			
 			var player = new simple_player();
 			//player.tempo = 270;
@@ -51,7 +51,7 @@
 		}
 		
 		function pgE(){
-			var notes = [['E3',4]]; 
+			var notes = [['E3',2]]; 
 			
 			var player = new simple_player();
 			//player.tempo = 270;
@@ -60,7 +60,7 @@
 		}
 		
 		function pgF(){
-			var notes = [['F3',4]]; 
+			var notes = [['F3',2]]; 
 			
 			var player = new simple_player();
 			//player.tempo = 270;
@@ -70,7 +70,7 @@
 		
 		
 		function pgFiss(){
-			var notes = [['F#3',4]]; 
+			var notes = [['F#3',2]]; 
 			
 			var player = new simple_player();
 			//player.tempo = 270;
@@ -80,7 +80,7 @@
 		
 		
 		function pgG(){
-			var notes = [['G3',4]]; 
+			var notes = [['G3',2]]; 
 			
 			var player = new simple_player();
 			//player.tempo = 270;
@@ -90,7 +90,7 @@
 		
 		
 		function pgAb(){
-			var notes = [['AB3',4]]; 
+			var notes = [['AB3',2]]; 
 			
 			var player = new simple_player();
 			//player.tempo = 270;
@@ -100,7 +100,7 @@
 		
 		
 		function pgA(){
-			var notes = [['A3',4]]; 
+			var notes = [['A3',2]]; 
 			
 			var player = new simple_player();
 			//player.tempo = 270;
@@ -109,7 +109,7 @@
 		}
 		
 		function pgHb(){
-			var notes = [['BB3',4]]; 
+			var notes = [['BB3',2]]; 
 			
 			var player = new simple_player();
 			//player.tempo = 270;
@@ -119,7 +119,7 @@
 		
 		
 		function pgH(){
-			var notes = [['B3',4]]; 
+			var notes = [['B3',2]]; 
 			
 			var player = new simple_player();
 			//player.tempo = 270;
@@ -129,7 +129,7 @@
 		
 		
 		function pgC2(){
-			var notes = [['C4',4]]; 
+			var notes = [['C4',2]]; 
 			
 			var player = new simple_player();
 			//player.tempo = 270;
